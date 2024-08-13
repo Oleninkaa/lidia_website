@@ -1,0 +1,23 @@
+.header-block {
+    &__label{
+        color: $primary;
+        font-size: 1.125rem;
+        font-weight: 800;
+        letter-spacing: .1062rem;
+        text-transform: uppercase;
+
+        &:not(:last-child){
+            padding-bottom: 0.625rem;
+        }
+    }
+
+    &__title {
+        color: $black;
+        font-size: 3rem;
+        font-weight: 800;
+        line-height: 135.416667%; /* 65/48 */
+        letter-spacing: .03rem;
+    }
+    
+}
+

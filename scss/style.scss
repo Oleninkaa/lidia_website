@@ -1,0 +1,232 @@
+@import url('null.css');
+@import '_colors.scss';
+@import 'components.scss';
+
+
+@import url(https://fonts.googleapis.com/css?family=Plus+Jakarta+Sans:regular,500,700,800);
+
+body{
+    font-family: "Plus Jakarta Sans";
+    font-size: 1rem;
+    color: $desc;
+   
+}
+
+[class*="__container"]{
+    max-width: 75rem + 1.875rem;
+    padding: 0 .9375rem;
+    margin: 0 auto;
+}
+
+.wrapper {
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+
+    overflow: clip; //hide everything outside
+
+    & > main{
+        flex-grow: 1;
+    }
+}
+
+
+
+.header {
+    padding-top: 77px;
+    // position: sticky;
+    // top: 0;
+
+    &__container {
+        display: flex;
+        align-items: center;
+        gap: 7.8125rem;
+    }
+    &__logo {
+        flex: 0 0 5rem;
+
+        & img{
+            max-width: 100%;
+        }
+    }
+    &__menu {
+    }
+}
+
+.menu {
+    &__list {
+        display: flex;
+        gap: 2.5rem;
+        align-items: center;
+    }
+    &__item {
+    }
+    &__link {
+        font-size: 14px;
+        color: $linkUnactive;
+        transition: color 0.3s;
+
+        &:hover{
+            color: $linkActive;
+        }
+    }
+}
+
+
+
+.page {
+    &__hero {
+    }
+}
+
+.hero {
+    padding-top: 3.875rem;
+    padding-bottom: 2.5rem;
+    position: relative;
+    
+    &__container {
+        display: flex;
+        
+
+        &::before,
+        &::after{
+            content: "";
+            position: absolute;
+           
+            bottom:0;
+            height: 150%;
+            width: 100vw;
+            border-radius: 1.25rem;
+           
+            transform-origin: left bottom;
+            background-color: $primary;
+            box-shadow: 0px 30px 60px rgba(71, 74, 87, 0.25);
+        }
+
+        &::before{
+            left: calc(50% + 20px);
+            transform: skewX(-20deg);
+        }
+
+        &::after{
+            left: calc(50% + 444px);
+            transform: skewX(34deg);
+        }
+    }
+
+    &__content {
+        
+
+        flex:0 1 50%;
+        display: grid;
+        align-content: start;
+        justify-content: start;
+        gap: 1.875rem;
+    }
+    &__images {
+        position: relative;
+        z-index: 2;
+        flex:0 1 50%;
+        
+    }
+}
+
+.content-hero {
+
+
+
+    &__title {
+        color: $heading;
+        font-size: 4.75rem;
+        font-weight: 800;
+        line-height: 117.105263%; /* 89/76 */
+        letter-spacing: -0.1875rem;
+
+        & a{
+            color: $primary;
+            transition: all 0.3;
+            
+            &:hover{
+                text-decoration: underline;
+            }
+        }
+
+        
+    }
+    &__text {
+        & p{
+            line-height: 187.5%; /* 30/16 */
+
+            &:not(:last-child){
+                padding-bottom: 2.125rem;
+            }
+        }
+    }
+    &__btn {
+        display: inline-block;
+        padding: 1.125rem 3.375rem;
+        background-color: $primary;
+        color: $white;
+        font-weight: 700;
+       
+        text-align: center;
+        border-radius: .625rem;
+
+        position: relative;
+        top: 0;
+        transition: all 0.3s;
+
+        &:hover{
+            top: 3px;
+            box-shadow: 0px 30px 60px 0px rgba(68, 117, 242, 0.5);
+        }
+    }
+}
+
+
+
+.images-hero {
+
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: repeat(2,1fr);
+    column-gap: 1.6875rem;
+
+    &__item {
+        
+    }
+   
+    &__image {
+        border-radius: .625rem;
+        overflow: hidden;
+        box-shadow: 0px 15px 30px 0px rgba(0, 0, 0, 0.25);
+        max-width: 100%;
+    }
+    &__item--01 {
+        grid-row: span 2;
+        align-self: flex-end;
+        padding-bottom: .625rem;
+    }
+    &__item--02 {
+        align-self: flex-start;
+       
+    }
+    &__item--03 {
+        grid-row: span 2;
+        align-self: center;
+        justify-self: flex-end;
+        padding-bottom: 1.5625rem;
+    }
+    &__item--04 {
+        align-self: flex-end;
+        justify-self: flex-end;
+    }
+}
+
+
+
+
+
+footer{
+    height: 200px;
+}

@@ -1,0 +1,181 @@
+@import url("null.css");
+@import url(https://fonts.googleapis.com/css?family=Plus+Jakarta+Sans:regular,500,700,800);
+.header-block__label {
+  color: #4475F2;
+  font-size: 1.125rem;
+  font-weight: 800;
+  letter-spacing: 0.1062rem;
+  text-transform: uppercase;
+}
+.header-block__label:not(:last-child) {
+  padding-bottom: 0.625rem;
+}
+.header-block__title {
+  color: #000000;
+  font-size: 3rem;
+  font-weight: 800;
+  line-height: 135.416667%; /* 65/48 */
+  letter-spacing: 0.03rem;
+}
+
+body {
+  font-family: "Plus Jakarta Sans";
+  font-size: 1rem;
+  color: #5E6282;
+}
+
+[class*=__container] {
+  max-width: 76.875rem;
+  padding: 0 0.9375rem;
+  margin: 0 auto;
+}
+
+.wrapper {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  overflow: clip;
+}
+.wrapper > main {
+  flex-grow: 1;
+}
+
+.header {
+  padding-top: 77px;
+}
+.header__container {
+  display: flex;
+  align-items: center;
+  gap: 7.8125rem;
+}
+.header__logo {
+  flex: 0 0 5rem;
+}
+.header__logo img {
+  max-width: 100%;
+}
+.menu__list {
+  display: flex;
+  gap: 2.5rem;
+  align-items: center;
+}
+.menu__link {
+  font-size: 14px;
+  color: #9A9EA6;
+  transition: color 0.3s;
+}
+.menu__link:hover {
+  color: #4737FF;
+}
+
+.hero {
+  padding-top: 3.875rem;
+  padding-bottom: 2.5rem;
+  position: relative;
+}
+.hero__container {
+  display: flex;
+}
+.hero__container::before, .hero__container::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  height: 150%;
+  width: 100vw;
+  border-radius: 1.25rem;
+  transform-origin: left bottom;
+  background-color: #4475F2;
+  box-shadow: 0px 30px 60px rgba(71, 74, 87, 0.25);
+}
+.hero__container::before {
+  left: calc(50% + 20px);
+  transform: skewX(-20deg);
+}
+.hero__container::after {
+  left: calc(50% + 444px);
+  transform: skewX(34deg);
+}
+.hero__content {
+  flex: 0 1 50%;
+  display: grid;
+  align-content: start;
+  justify-content: start;
+  gap: 1.875rem;
+}
+.hero__images {
+  position: relative;
+  z-index: 2;
+  flex: 0 1 50%;
+}
+
+.content-hero__title {
+  color: #181E4B;
+  font-size: 4.75rem;
+  font-weight: 800;
+  line-height: 117.105263%; /* 89/76 */
+  letter-spacing: -0.1875rem;
+}
+.content-hero__title a {
+  color: #4475F2;
+  transition: all 0.3;
+}
+.content-hero__title a:hover {
+  text-decoration: underline;
+}
+.content-hero__text p {
+  line-height: 187.5%; /* 30/16 */
+}
+.content-hero__text p:not(:last-child) {
+  padding-bottom: 2.125rem;
+}
+.content-hero__btn {
+  display: inline-block;
+  padding: 1.125rem 3.375rem;
+  background-color: #4475F2;
+  color: #FFFFFF;
+  font-weight: 700;
+  text-align: center;
+  border-radius: 0.625rem;
+  position: relative;
+  top: 0;
+  transition: all 0.3s;
+}
+.content-hero__btn:hover {
+  top: 3px;
+  box-shadow: 0px 30px 60px 0px rgba(68, 117, 242, 0.5);
+}
+
+.images-hero {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  column-gap: 1.6875rem;
+}
+.images-hero__image {
+  border-radius: 0.625rem;
+  overflow: hidden;
+  box-shadow: 0px 15px 30px 0px rgba(0, 0, 0, 0.25);
+  max-width: 100%;
+}
+.images-hero__item--01 {
+  grid-row: span 2;
+  align-self: flex-end;
+  padding-bottom: 0.625rem;
+}
+.images-hero__item--02 {
+  align-self: flex-start;
+}
+.images-hero__item--03 {
+  grid-row: span 2;
+  align-self: center;
+  justify-self: flex-end;
+  padding-bottom: 1.5625rem;
+}
+.images-hero__item--04 {
+  align-self: flex-end;
+  justify-self: flex-end;
+}
+
+footer {
+  height: 200px;
+}/*# sourceMappingURL=style.css.map */

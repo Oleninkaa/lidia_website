@@ -34,20 +34,49 @@ body{
 
 .header {
     padding-top: 77px;
+    z-index: 50;
     // position: sticky;
     // top: 0;
+
+    @media (max-width: 29.9988rem) {// 479.98px
+        &{
+            padding-top: .9375rem;
+        }
+    }
 
     &__container {
         display: flex;
         align-items: center;
-        gap: 7.8125rem;
+        column-gap: 7.8125rem;
+
+        @media (max-width: 61.9988rem) {//991.98
+            &{
+                gap: 3.125rem;
+            }
+        }
+
+        @media (max-width: 29.9988rem) {// 479.98px
+            &{
+                flex-direction: column;
+                align-items: center;
+            }
+        }
     }
     &__logo {
         flex: 0 0 5rem;
 
         & img{
             max-width: 100%;
+            min-height: 100%;
         }
+
+        @media (max-width: 29.9988rem) {// 479.98px
+            &{
+                flex: 0 0 auto;
+                max-width: 9.375rem;
+            }
+        }
+        
     }
     &__menu {
     }
@@ -58,6 +87,16 @@ body{
         display: flex;
         gap: 2.5rem;
         align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        column-gap: 2.5rem;
+        row-gap: .3125rem;
+
+        @media (max-width: 61.9988rem) {//991.98
+            &{
+                column-gap: 1.25rem;
+            }
+        }
     }
     &__item {
     }
@@ -68,6 +107,13 @@ body{
 
         &:hover{
             color: $linkActive;
+        }
+
+        @media (max-width: 29.9988rem) {// 479.98px
+            &{
+                font-size: 1.25rem;
+                font-weight: 700;
+            }
         }
     }
 }
@@ -86,6 +132,15 @@ body{
     
     &__container {
         display: flex;
+
+
+        @media (max-width:75rem) {
+            &{
+                flex-direction: column;
+                row-gap: 1.875rem;
+            }
+        
+        }
         
 
         &::before,
@@ -95,7 +150,7 @@ body{
            
             bottom:0;
             height: 150%;
-            width: 100vw;
+            width: 200vw;
             border-radius: 1.25rem;
            
             transform-origin: left bottom;
@@ -115,13 +170,12 @@ body{
     }
 
     &__content {
-        
+        padding-right: 0;
 
         flex:0 1 50%;
-        display: grid;
-        align-content: start;
-        justify-content: start;
-        gap: 1.875rem;
+        
+        
+        
     }
     &__images {
         position: relative;
@@ -131,9 +185,27 @@ body{
     }
 }
 
+
+
 .content-hero {
 
+    z-index: 3;
+    display: grid;
+    align-content: start;
+    gap: 1.875rem;
+    position: relative;
 
+    @media (min-width: 478.9808px) {//478.98px
+        &{
+            justify-items: start;
+        }
+    }
+
+    @media (min-width:75rem) { //1200px
+        &{
+            padding-right: 1.875rem;
+        }
+    }
 
     &__title {
         color: $heading;
@@ -142,9 +214,22 @@ body{
         line-height: 117.105263%; /* 89/76 */
         letter-spacing: -0.1875rem;
 
+        @media (max-width: 61.9988rem) {
+            &{
+                font-size: 3.4375rem;
+            }
+        }
+
+        @media (max-width: 29.9988rem) {
+            &{
+                font-size: 2.625rem;
+            }
+        }
+
         & a{
             color: $primary;
             transition: all 0.3;
+            text-shadow: 1px 1px 8px $white;
             
             &:hover{
                 text-decoration: underline;
@@ -192,6 +277,16 @@ body{
     grid-template-rows: repeat(2,1fr);
     column-gap: 1.6875rem;
 
+
+    @media (max-width:75rem) {
+       
+        &{
+            align-self: center;
+        }
+    
+    }
+
+
     &__item {
         
     }
@@ -230,3 +325,5 @@ body{
 footer{
     height: 200px;
 }
+
+

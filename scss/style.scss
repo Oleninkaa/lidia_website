@@ -101,7 +101,7 @@ body{
     &__item {
     }
     &__link {
-        font-size: 14px;
+        font-size: .875rem;
         color: $linkUnactive;
         transition: color 0.3s;
 
@@ -122,7 +122,7 @@ body{
 
 .page {
     &__hero {
-        margin-bottom: 170px;
+        margin-bottom: 10.625rem;
 
         @media (max-width: 75rem){
             &{
@@ -445,7 +445,7 @@ body{
         align-items: flex-start;
         gap: 1.25rem;
 
-        @media (max-width: 991px) {
+        @media (max-width: 61.9375rem) {
             justify-content: center;
         }
 
@@ -454,11 +454,11 @@ body{
         flex: 0 1 17.5rem;
         text-align: center;
         display: grid;
-        gap: 20px;
+        gap: 1.25rem;
         justify-items: center;
 
    
-        @media (max-width: 610px) {
+        @media (max-width: 38.125rem) {
             flex-grow: 1;
         }
     }
@@ -468,8 +468,8 @@ body{
         align-items: center;
         border-radius: 1.25rem;
         background-color: $primary;
-        height: 100px;
-        width: 100px;
+        height: 6.25rem;
+        width: 6.25rem;
 
         box-shadow: 0rem 1.875rem 3.75rem 0rem rgba(71, 74, 87, 0.25);
 
@@ -623,14 +623,14 @@ body{
 
         box-shadow: 0rem 6.25rem 5rem 0rem rgba(0, 0, 0, 0.07), 0rem 2.6111rem 2.0889rem 0rem rgba(0, 0, 0, 0.05), 0rem 1.396rem 1.1168rem 0rem rgba(0, 0, 0, 0.04), 0rem .7826rem .6261rem 0rem rgba(0, 0, 0, 0.04), 0rem .4156rem .3325rem 0rem rgba(0, 0, 0, 0.03), 0rem .1729rem .1384rem 0rem rgba(0, 0, 0, 0.02);
 
-        padding: 45px;
+        padding: 2.8125rem;
         display: flex;
         flex-direction: column;
         align-items: center;
         text-align: center;
 
         & > *{
-            margin-bottom: 15px;
+            margin-bottom: .9375rem;
 
             &:last-child{
                 margin-bottom: 0;
@@ -641,7 +641,7 @@ body{
     }
     &__link-avatar {
         overflow: hidden;
-        margin-bottom: 30px;
+        margin-bottom: 1.875rem;
         & img{
             border-radius: 9.3125rem;
             border: .0625rem solid var(--muted-color, #BDBDBD);
@@ -655,13 +655,13 @@ body{
     &__text {
         flex-grow: 1;
         & p{
-            margin-bottom: 25px;
+            margin-bottom: 1.5625rem;
             font-weight: 500;
             line-height: 187.5%; /* 30/16 */
             letter-spacing: .0125rem;
 
             &:not(:last-child){
-                margin-bottom: 10px;
+                margin-bottom: .625rem;
             }
 
         }
@@ -696,29 +696,30 @@ body{
     &__map {
         width: 100%;
         height: 25.3125rem;
+        box-shadow: 0px 30px 60px 0px rgba(71, 74, 87, 0.25);
     }
 }
 
 
 .footer {
     &__body{
-        margin-bottom: 96px;
+        margin-bottom: 6rem;
       
         
-        @media (max-width: 1200px){
+        @media (max-width: 75rem){
             &{
-                margin-bottom: 70px;
+                margin-bottom: 4.375rem;
             }
         }
     
-        @media (max-width: 991.9808px){
+        @media (max-width: 61.9988rem){
             &{
-                margin-bottom: 50px;
+                margin-bottom: 3.125rem;
             }
         }
-        @media (max-width: 767.9808px){
+        @media (max-width: 47.9988rem){
             &{
-                margin-bottom: 30px;
+                margin-bottom: 1.875rem;
             }
         
         }
@@ -732,7 +733,7 @@ body{
         padding: 50px .9375rem;
         color: $white;
         font-weight: 700;
-        font-style: 14px;
+        font-size: .875rem;
 
     }
     &__container {
@@ -753,7 +754,7 @@ body{
         text-align: center;
         font-size: 1.5rem;
         font-weight: 700;
-        margin-bottom: 25px;
+        margin-bottom: 1.5625rem;
     }
     &__logo {
         max-width: 15.5rem;
@@ -762,16 +763,16 @@ body{
         display: flex;
         flex-wrap: wrap;
         gap: 1.0625rem;
-        height: 93px;
+        height: 5.8125rem;
         align-items: center;
 
     }
 
     &__link {
         color: $black;
-        font-size: 20px;
+        font-size: 1.25rem;
         font-weight: 500;
-        height: 93px;
+        height: 5.8125rem;
         align-items: center;
         display: flex;
         justify-content: center;
@@ -790,7 +791,11 @@ body{
     justify-content: space-between;
     flex-wrap: wrap;
     gap: .625rem;
+    
     .social__item {
+        &:hover{
+            color: $primary;
+        }
     }
 }
 
